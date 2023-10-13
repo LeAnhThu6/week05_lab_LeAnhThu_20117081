@@ -38,7 +38,7 @@ public class Candidate {
     private String phone;
     @Column(name = "email", nullable = false)
     private String email;
-    @OneToMany(mappedBy = "candidate", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "candidate", fetch = FetchType.EAGER)
     private List<Experience> experiences;
 
     public Candidate(String fullName, LocalDate dob, Address address, String phone, String email) {
